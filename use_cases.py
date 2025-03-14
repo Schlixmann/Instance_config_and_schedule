@@ -567,6 +567,12 @@ def get_release_times(dirpath:Path, resource_file:Path):
 
 if __name__ == "__main__":
 
+    from docplex.cp.model import * 
+
+    # Set up path to IBM CPLEX cpoptimizer on your machine
+    context.solver.local.execfile = '/opt/ibm/ILOG/CPLEX_Studio2211/cpoptimizer/bin/x86-64_linux/cpoptimizer'
+
+
     offline=True
     online =True
 
