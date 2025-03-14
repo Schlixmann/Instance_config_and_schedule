@@ -233,6 +233,7 @@ class Simulator():
         end = time.time()
         self.add_allocation_metadata(float(end-start))
     
+
     def single_instance_processing(self, decomposed:bool=False):
         """
         Allocates each instance on arrival. 
@@ -253,37 +254,6 @@ class Simulator():
                 result = cp_solver_decomposed_strengthened_cuts(self.schedule_filepath, TimeLimit=self.time_limit, sigma=self.sigma)
             else:
                 result = cp_solver(self.schedule_filepath, log_file=f"{self.schedule_filepath}.log", sigma=self.sigma, timeout=self.time_limit)
-            self.save_schedule(result)
-
-
-    def single_instance_replan(self, warmstart:bool = False):
-        """
-        Deprecated: 
-        Allowed full replaning of scheduled instances.
-        """
-        while self.task_queue:
-            queue_object = self.task_queue.pop(0)
-            schedule_dict = self.get_current_schedule_dict()
-            instance_ilp_rep = self.get_current_instance_ilp_rep(schedule_dict, queue_object)
-            schedule_dict = self.add_ilp_rep_to_schedule(instance_ilp_rep, schedule_dict, queue_object)
-            schedule_dict["resources"] = list(set(schedule_dict["resources"]).union(instance_ilp_rep["resources"]))
-            if warmstart:
-                self.create_warmstart_file(schedule_dict, [queue_object])
-            # set "fixed" to false for all instances
-            for ra_pst in schedule_dict["instances"]:
-                ra_pst["fixed"] = False
-            self.save_schedule(schedule_dict)
-
-            # Get current timestamp: == release time of queue object
-            # Replannable tasks are all tasks that have a release time > current time
-            # set job to unfixed 
-            # create extra online cp_solver method
-            release_time = queue_object.release_time
-
-            if warmstart:
-                result = cp_solver(self.schedule_filepath, "tmp/warmstart.json")
-            else:
-                result = cp_solver_alternative_new(self.schedule_filepath, log_file=f"{self.schedule_filepath}.log", replan=True, release_time=release_time, timeout=100)
             self.save_schedule(result)
 
 
@@ -391,10 +361,12 @@ class Simulator():
         sim.simulate()
         print("Warmstart file created")
 
+
     def update_task_queue(self, queue:list[QueueObject], queue_object: QueueObject):
         # instance, allocation_type, task, release_time = task
         queue.append(queue_object)
         queue.sort(key=lambda object: object.release_time)
+
 
     def add_allocation_metadata(self, computing_time: float):
         with open(self.schedule_filepath, "r+") as f:
@@ -419,6 +391,7 @@ class Simulator():
             f.seek(0)  # Reset file pointer to the beginning
             json.dump(ra_psts, f, indent=2)
             f.truncate()
+    
     
     def ilp_to_schedule_file(self, ilp_rep, schedule_dict, instance_id):
         selected_branches = [branch for branchId, branch in ilp_rep["branches"].items() if branch["selected"] == 1.0]
