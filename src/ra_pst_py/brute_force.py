@@ -13,6 +13,9 @@ import uuid
 import pathlib
 from lxml import etree
 
+
+### Unused Module ###
+
 def build_optimized_instance_brute(ra_pst:RA_PST):
     search = BruteForceSearch(ra_pst)
     all_options = search.get_all_branch_combinations()
@@ -69,7 +72,7 @@ class BruteForceSearch():
         etree.indent(tree, space="\t", level=0)
         tree.write("tmp/process.xml")
     
-        tree = etree.ElementTree(self.ra_pst.resource_url)
+        tree = etree.ElementTree(self.ra_pst.resource_data)
         etree.indent(tree, space="\t", level=0)
         tree.write("tmp/resources.xml")
         list_parts = [solutions[part_size * i : part_size * (i + 1)] for i in range(num_parts)]

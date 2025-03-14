@@ -469,6 +469,7 @@ def cp_subproblem(ra_psts, branches, lower_bound=0, sigma:int=0):
     return schedule, all_jobs
 
 def create_schedule(ra_psts, result, all_jobs):
+    """ Can extract a schedule from SP, only needed for debugging"""
     all_job_names = {job.get_name():job for job in all_jobs}
     intervals = []
     for ra_pst in ra_psts["instances"]:

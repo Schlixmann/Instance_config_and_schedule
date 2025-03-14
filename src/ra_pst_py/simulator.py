@@ -1,6 +1,6 @@
 from src.ra_pst_py.instance import Instance
 from src.ra_pst_py.core import Branch, RA_PST
-from src.ra_pst_py.cp_docplex import cp_solver, cp_solver_decomposed, cp_solver_alternative_new, cp_solver_scheduling_only
+from src.ra_pst_py.cp_docplex import cp_solver, cp_solver_scheduling_only
 from src.ra_pst_py.cp_docplex_decomposed import cp_solver_decomposed_strengthened_cuts, cp_subproblem
 from src.ra_pst_py.ilp import configuration_ilp
 

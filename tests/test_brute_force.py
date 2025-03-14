@@ -24,9 +24,3 @@ class BruteForceTest(unittest.TestCase):
         all_options = self.search.get_all_branch_combinations()
         self.assertEqual(len(all_options), self.search.solution_space_size)
 
-    def test_find_solutions(self):
-        all_options = self.search.get_all_branch_combinations()
-        results = self.search.find_solutions(all_options)
-        print(results[-1])
-        self.search.save_best_solution_process(top_n = 1)
-        #TODO saving and combining pickles

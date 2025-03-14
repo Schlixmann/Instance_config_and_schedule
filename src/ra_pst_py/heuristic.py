@@ -490,8 +490,6 @@ class TaskAllocator():
         return exp_ready_element
 
 
-
-    
     def get_timeslot_matrix(self, release_time:float, resource_name:str, schedule_dict:dict):
         if not schedule_dict:
             return np.array([[release_time, np.inf]])

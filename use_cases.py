@@ -1,7 +1,6 @@
 from src.ra_pst_py.builder import build_rapst, show_tree_as_graph
 from src.ra_pst_py.simulator import Simulator, AllocationTypeEnum
 from src.ra_pst_py.instance import Instance
-from src.ra_pst_py.schedule import Schedule
 from src.ra_pst_py.core import RA_PST
 from src.ra_pst_py.ilp import configuration_ilp
 

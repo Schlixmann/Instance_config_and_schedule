@@ -1,6 +1,5 @@
 from src.ra_pst_py.change_operations import ChangeOperation
 from src.ra_pst_py.heuristic import TaskAllocator
-from src.ra_pst_py.schedule import Schedule
 from src.ra_pst_py.core import RA_PST, Branch
 
 from . import utils 
@@ -15,7 +14,7 @@ import json
 CURRENT_MIN_DATE = "2024-01-01T00:00" # Placeholder for scheduling heuristics
 
 class Instance():
-    def __init__(self, ra_pst, branches_to_apply:dict, schedule:Schedule=None, id=None, release_time:int = None):
+    def __init__(self, ra_pst, branches_to_apply:dict, schedule=None, id=None, release_time:int = None):
         self.id = id
         self.ra_pst:RA_PST = ra_pst
         self.ns = ra_pst.ns
