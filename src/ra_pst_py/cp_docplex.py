@@ -4,7 +4,7 @@ import gurobipy as gp
 from gurobipy import GRB
 
 
-context.solver.local.execfile = '/opt/ibm/ILOG/CPLEX_Studio2211/cpoptimizer/bin/x86-64_linux/cpoptimizer'
+#context.solver.local.execfile = '/opt/ibm/ILOG/CPLEX_Studio2211/cpoptimizer/bin/x86-64_linux/cpoptimizer'
 
 
 def cp_solver(ra_pst_json, warm_start_json=None, log_file = "cpo_solver.log", timeout=100, break_symmetries:bool=False, sigma:int=0):
