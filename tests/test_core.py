@@ -75,8 +75,8 @@ class CoreTest(unittest.TestCase):
         self.assertEqual(deletes[0], "wait")
 
     def test_get_branches_ilp(self):
-        process = parse_process_file("example_data/test_process_cpee.xml")
-        resources = parse_resource_file("example_data/test_resource.xml")
+        process = parse_process_file("test_instances/paper_process_short.xml")
+        resources = parse_resource_file("test_instances/offer_resources_many_invalid_branches.xml")
 
         ra_pst = RA_PST(process, resources)
         # Get tasklist from RA_PST

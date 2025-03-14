@@ -370,7 +370,7 @@
           "branch_no": 0,
           "branchCost": 30.0,
           "release_time": 0,
-          "selected": 1,
+          "selected": 0,
           "branch_jobs": {
             "r_1": 0,
             "r_2": 0,
@@ -398,7 +398,7 @@
           "branch_no": 1,
           "branchCost": 23.0,
           "release_time": 0,
-          "selected": 0,
+          "selected": 1,
           "branch_jobs": {
             "r_1": 0,
             "r_2": 0,
@@ -699,8 +699,8 @@
             "i1-i1-a4-10-16"
           ],
           "release_time": 0,
-          "start": 31,
-          "selected": 1
+          "start": 0,
+          "selected": 0
         },
         "i1-i1-a10-12-18": {
           "branch": "i1-a10-12",
@@ -721,8 +721,8 @@
             "i1-i1-a10-11-17"
           ],
           "release_time": 0,
-          "start": 0,
-          "selected": 0
+          "start": 32,
+          "selected": 1
         }
       },
       "release_time": null,
@@ -1828,7 +1828,7 @@
           "branch_no": 0,
           "branchCost": 30.0,
           "release_time": 0,
-          "selected": 1,
+          "selected": 0,
           "branch_jobs": {
             "r_1": 0,
             "r_2": 0,
@@ -1856,7 +1856,7 @@
           "branch_no": 1,
           "branchCost": 23.0,
           "release_time": 0,
-          "selected": 0,
+          "selected": 1,
           "branch_jobs": {
             "r_1": 0,
             "r_2": 0,
@@ -2021,7 +2021,7 @@
             "i3-i3-a4-5-9"
           ],
           "release_time": 0,
-          "start": 32,
+          "start": 70,
           "selected": 1
         },
         "i3-i3-a4-7-11": {
@@ -2157,8 +2157,8 @@
             "i3-i3-a4-10-16"
           ],
           "release_time": 0,
-          "start": 93,
-          "selected": 1
+          "start": 0,
+          "selected": 0
         },
         "i3-i3-a10-12-18": {
           "branch": "i3-a10-12",
@@ -2179,8 +2179,8 @@
             "i3-i3-a10-11-17"
           ],
           "release_time": 0,
-          "start": 0,
-          "selected": 0
+          "start": 85,
+          "selected": 1
         }
       },
       "release_time": null,
@@ -2319,7 +2319,7 @@
           "branch_no": 4,
           "branchCost": 16.0,
           "release_time": 0,
-          "selected": 1,
+          "selected": 0,
           "branch_jobs": {
             "r_1": 0,
             "r_2": 0,
@@ -2348,7 +2348,7 @@
           "branch_no": 5,
           "branchCost": 45.0,
           "release_time": 0,
-          "selected": 0,
+          "selected": 1,
           "branch_jobs": {
             "r_1": 0,
             "r_2": 0,
@@ -2674,8 +2674,8 @@
             "i4-i4-a3-2-4"
           ],
           "release_time": 0,
-          "start": 32,
-          "selected": 1
+          "start": 0,
+          "selected": 0
         },
         "i4-i4-a3-4-6": {
           "branch": "i4-a3-4",
@@ -2689,7 +2689,7 @@
           ],
           "release_time": 0,
           "start": 0,
-          "selected": 0
+          "selected": 1
         },
         "i4-i4-a3-4-7": {
           "branch": "i4-a3-4",
@@ -2703,8 +2703,8 @@
             "i4-i4-a3-3-5"
           ],
           "release_time": 0,
-          "start": 0,
-          "selected": 0
+          "start": 31,
+          "selected": 1
         },
         "i4-i4-a4-5-8": {
           "branch": "i4-a4-5",
@@ -2750,7 +2750,7 @@
             "i4-i4-a4-5-9"
           ],
           "release_time": 0,
-          "start": 48,
+          "start": 55,
           "selected": 1
         },
         "i4-i4-a4-7-11": {
@@ -2886,7 +2886,7 @@
             "i4-i4-a4-10-16"
           ],
           "release_time": 0,
-          "start": 63,
+          "start": 70,
           "selected": 1
         },
         "i4-i4-a10-12-18": {
@@ -3286,7 +3286,7 @@
           "branch_no": 0,
           "branchCost": 30.0,
           "release_time": 0,
-          "selected": 0,
+          "selected": 1,
           "branch_jobs": {
             "r_1": 0,
             "r_2": 0,
@@ -3314,7 +3314,7 @@
           "branch_no": 1,
           "branchCost": 23.0,
           "release_time": 0,
-          "selected": 1,
+          "selected": 0,
           "branch_jobs": {
             "r_1": 0,
             "r_2": 0,
@@ -3479,7 +3479,7 @@
             "i5-i5-a4-5-9"
           ],
           "release_time": 0,
-          "start": 63,
+          "start": 85,
           "selected": 1
         },
         "i5-i5-a4-7-11": {
@@ -3615,8 +3615,8 @@
             "i5-i5-a4-10-16"
           ],
           "release_time": 0,
-          "start": 0,
-          "selected": 0
+          "start": 100,
+          "selected": 1
         },
         "i5-i5-a10-12-18": {
           "branch": "i5-a10-12",
@@ -3637,8 +3637,8 @@
             "i5-i5-a10-11-17"
           ],
           "release_time": 0,
-          "start": 78,
-          "selected": 1
+          "start": 0,
+          "selected": 0
         }
       },
       "release_time": null,
@@ -3647,9 +3647,9 @@
       "solution": {
         "objective": 138,
         "solver status": "?",
-        "lower_bound": 99.99999987879937,
-        "computing time": 10.056400537490845,
-        "total interval length": 359.0
+        "lower_bound": 100.9999998469977,
+        "computing time": 10.00832748413086,
+        "total interval length": 381.0
       }
     }
   ],
@@ -3663,8 +3663,8 @@
   "solution": {
     "objective": 138,
     "solver status": "?",
-    "lower_bound": 99.99999987879937,
-    "computing time": 10.056400537490845,
-    "total interval length": 359.0
+    "lower_bound": 100.9999998469977,
+    "computing time": 10.00832748413086,
+    "total interval length": 381.0
   }
 }
